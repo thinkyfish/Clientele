@@ -8,7 +8,7 @@ emptydata = {
     "directory": "empty"
 
 }
-clientdir = '/home/tristan/work/Clientele/Clients'
+clientdir = '/home/tristan/src/Clientele/Clients'
 
 
 class Client:
