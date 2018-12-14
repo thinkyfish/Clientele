@@ -166,6 +166,8 @@ def load_clients():
 
 if __name__ == "__main__":
     global window
+    if (not os.path.isdir(clientele.clientdir)):
+        os.mkdir(clientele.clientdir)
     app = QApplication(sys.argv)
     uifile = QFile("proto1.ui")
     uifile.open(QFile.ReadOnly)

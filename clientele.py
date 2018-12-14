@@ -14,7 +14,7 @@ emptyproject = {
     "directory": "empty"
 
 }
-clientdir = '/home/tristan/src/Clientele/Clients'
+clientdir = os.environ['HOME'] + '/clients'
 
 class Project:
     def __init__(self, parentdir, dirname):
@@ -82,7 +82,7 @@ def newclient(dirname):
     if(not os.path.isdir(fulldir)):
         os.mkdir(fulldir)
         with open(fulldir + "/Client.json", "w") as write_file:
-            newdata = emptyproject.copy()
+            newdata = emptydata.copy()
             newdata['directory'] = dirname
             newdata['name'] = dirname
             json.dump(newdata, write_file)
